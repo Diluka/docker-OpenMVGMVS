@@ -1,0 +1,15 @@
+[submodule "eigen"]
+	path = eigen
+	url = https://github.com/eigenteam/eigen-git-mirror
+[submodule "ceres-solver"]
+	path = ceres-solver
+	url = https://github.com/ceres-solver/ceres-solver
+[submodule "OpenMVG"]
+	path = OpenMVG
+	url = https://github.com/openMVG/openMVG
+[submodule "VCG"]
+	path = VCG
+	url = https://github.com/cdcseacave/VCG
+[submodule "OpenMVS"]
+	path = OpenMVS
+	url = https://github.com/cdcseacave/openMVS

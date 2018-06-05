@@ -48,11 +48,11 @@ import subprocess
 import sys
 
 # Indicate the openMVG and openMVS binary directories
-OPENMVG_BIN = "D:/Pro/OpenMVG/install/bin/"
-OPENMVS_BIN = "D:/Pro/OpenMVS/install/bin/"
+OPENMVG_BIN = "/usr/local/bin"
+OPENMVS_BIN = "/usr/local/bin/OpenMVS"
 
 # Indicate the openMVG camera sensor width directory
-CAMERA_SENSOR_WIDTH_DIRECTORY = OPENMVG_BIN
+CAMERA_SENSOR_WIDTH_DIRECTORY = "/usr/local/share/openMVG"
 
 DEBUG=False
 

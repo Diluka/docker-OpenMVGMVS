@@ -13,3 +13,6 @@
 [submodule "OpenMVS"]
 	path = OpenMVS
 	url = https://github.com/cdcseacave/openMVS
+[submodule "example/sceaux-castle"]
+	path = example/sceaux-castle
+	url = https://github.com/openMVG/ImageDataset_SceauxCastle

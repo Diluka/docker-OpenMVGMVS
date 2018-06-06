@@ -1,15 +1,17 @@
 FROM ubuntu:16.04
 
 # Fetch dependencies from apt-get
-RUN apt-get update 
-RUN apt-get install -y cmake git libpng-dev libjpeg-dev libtiff-dev libglu1-mesa-dev libxxf86vm-dev libxxf86vm1 libxmu-dev libxi-dev libxrandr-dev gcc gcc-multilib
-RUN apt-get install -y libopencv-dev
-RUN apt-get install -y libboost-all-dev
-RUN apt-get install -y libcgal-dev libcgal-qt5-dev
-RUN apt-get install -y libgoogle-glog-dev
-RUN apt-get install -y python-dev python-pip
-RUN apt-get install -y libsuitesparse-dev libatlas-base-dev 
-RUN apt-get install -y freeglut3-dev libglew-dev libglfw3-dev graphviz
+RUN apt-get update \
+    && apt-get install -y \
+    cmake git libpng-dev libjpeg-dev libtiff-dev libglu1-mesa-dev libxxf86vm-dev libxxf86vm1 libxmu-dev libxi-dev libxrandr-dev gcc gcc-multilib \
+    libopencv-dev \
+    libboost-all-dev \
+    libcgal-dev libcgal-qt5-dev \
+    libgoogle-glog-dev \
+    python-dev python-pip \
+    libsuitesparse-dev libatlas-base-dev \
+    freeglut3-dev libglew-dev libglfw3-dev graphviz \
+    && apt-get autoremove && apt-get clean
 
 WORKDIR /opt
 

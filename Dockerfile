@@ -1,34 +1,6 @@
-FROM ubuntu:16.04
-
-# Fetch dependencies from apt-get
-RUN apt-get update \
-    && apt-get install -y \
-    cmake git libpng-dev libjpeg-dev libtiff-dev libglu1-mesa-dev libxxf86vm-dev libxxf86vm1 libxmu-dev libxi-dev libxrandr-dev gcc gcc-multilib \
-    libopencv-dev \
-    libboost-all-dev \
-    libcgal-dev libcgal-qt5-dev \
-    libgoogle-glog-dev \
-    python-dev python-pip \
-    libsuitesparse-dev libatlas-base-dev \
-    freeglut3-dev libglew-dev libglfw3-dev graphviz \
-    && apt-get autoremove && apt-get clean
+FROM diluka/sfm-base
 
 WORKDIR /opt
-
-# Install Eigen
-# RUN apt-get install -y libeigen3-dev
-ADD eigen ./eigen
-RUN mkdir -p /opt/eigen_build && cd /opt/eigen_build \
-    && cmake . /opt/eigen \
-    && make && make install
-
-# Install Ceres
-# RUN apt-get install -y libceres-dev
-ADD ceres-solver ./ceres-solver
-RUN mkdir -p /opt/ceres_build \
-    && cd /opt/ceres_build \
-    && cmake . /opt/ceres-solver/ -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF \
-    && make && make install 
 
 # Install OpenMVG
 ADD OpenMVG ./OpenMVG
